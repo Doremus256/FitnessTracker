@@ -68,7 +68,7 @@ app.post("/submit", ({ body }, res) => {
 
 // SHOW NEW WORKOUT WITH NEW ADDITIONAL EXERCISES //
 
-app.get("/workout", (req, res) => {
+app.get("/stats", (req, res) => {
     db.Workout.find({})
         .populate("exercises")
         .then(dbWorkout => {
